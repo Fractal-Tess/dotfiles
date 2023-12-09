@@ -23,7 +23,7 @@
     ],
     max_window_width: None,
     layouts: [
-        MainAndVertStack,
+        "MainAndVertStack",
         // MainAndHorizontalStack,
         // MainAndDeck,
         // GridHorizontal,
@@ -67,7 +67,7 @@
         ( window_class: "(?i).*238960.*", spawn_on_tag: 5),
         ( window_class: "(?i).*path of building.exe.*", spawn_on_tag:4),
         ( window_class: "(?i).*awakened.*", spawn_floating:true),
-        ( window_class: "(?i).*felsong-64.exe.*", spawn_on_tag:4),
+        ( window_class: "(?i).*wow.exe.*", spawn_on_tag:4),
         ( window_class: "(?i).*steam_app_8500.*", spawn_on_tag:4),
 
         // Development projects with window spawns
@@ -95,6 +95,7 @@
         (command: Execute, value: "kitty", modifier: ["modkey"], key: "Return"),
         (command: Execute, value: "kitty -e zsh -c ncmpcpp", modifier: ["modkey"], key: "m"),
         (command: Execute, value: "code", modifier: ["modkey"], key: "c"),
+        (command: Execute, value: "rofi -show calc -modi calc -no-show-match -no-sort", modifier: ["modkey", "Shift"], key: "c"),
         (command: Execute, value: "xset dpms force off", modifier: ["modkey"], key: "0"),
         (command: Execute, value: "pcmanfm -n", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "clipcat-menu", modifier: ["modkey"], key: "h"),
