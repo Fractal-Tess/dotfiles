@@ -19,17 +19,21 @@ local plugins = {
     opts = {
       overrides = overrides.mason,
       ensure_installed = {
+        -- Web stuff
         "eslint-lsp",
-        "prettier",
+        "prettierd",
         "typescript-language-server",
         "svelte-language-server",
         "css-lsp",
         "html-lsp",
         "tailwindcss-language-server",
+        -- C/C++
         "clangd",
         "clang-format",
+        -- Lua
         "lua-language-server",
         "stylua",
+        -- Rust
         "rust-analyzer",
         "rustfmt"
       }
