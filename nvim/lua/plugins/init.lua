@@ -3,7 +3,6 @@
 local default_plugins = {
 
   "nvim-lua/plenary.nvim",
-
   {
     "NvChad/base46",
     branch = "v2.0",
@@ -16,6 +15,15 @@ local default_plugins = {
     "NvChad/ui",
     branch = "v2.0",
     lazy = false,
+  },
+
+  -- Tags autoclose
+  {
+    "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
   },
 
   {
