@@ -29,6 +29,7 @@ M.mason = {
     "stylua",
 
     -- web dev stuff
+    "emmet-language-server",
     "css-lsp",
     "html-lsp",
     "typescript-language-server",

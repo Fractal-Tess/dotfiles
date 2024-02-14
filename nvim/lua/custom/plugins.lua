@@ -20,6 +20,7 @@ local plugins = {
       overrides = overrides.mason,
       ensure_installed = {
         -- Web stuff
+        "emmet-language-server",
         "eslint-lsp",
         "prettierd",
         "typescript-language-server",
