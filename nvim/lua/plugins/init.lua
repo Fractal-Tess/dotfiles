@@ -3,6 +3,7 @@
 local default_plugins = {
 
   "nvim-lua/plenary.nvim",
+
   {
     "NvChad/base46",
     branch = "v2.0",
@@ -17,13 +18,28 @@ local default_plugins = {
     lazy = false,
   },
 
+  -- Copilot
+
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    config = function()
+      require("copilot").setup {
+        suggestion = {
+          auto_trigger = true,
+        },
+      }
+    end,
+  },
+
   -- Tags autoclose
   {
     "windwp/nvim-ts-autotag",
     event = "VeryLazy",
     config = function()
       require("nvim-ts-autotag").setup()
-    end
+    end,
   },
 
   {
