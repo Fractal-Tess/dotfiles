@@ -18,6 +18,7 @@ local default_plugins = {
     lazy = false,
   },
 
+
   -- Copilot
 
   {

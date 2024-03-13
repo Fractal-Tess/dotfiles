@@ -13,6 +13,20 @@ local options = {
     rust = { "rustfmt" },
 
     sh = { "shfmt" },
+    nix = { "nixpkgsfmt" },
+    c = { "clangformat" },
+    cpp = { "clangformat" },
+  },
+
+  formatters = {
+    nixpkgsfmt = {
+      command = "nixpkgs-fmt",
+      args = {},
+    },
+    clangformat = {
+      inherit = false,
+      command = "clang-format",
+    },
   },
 
   -- adding same formatter for multiple filetypes can look too much work for some

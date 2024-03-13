@@ -3,6 +3,7 @@ local M = {}
 M.treesitter = {
   ensure_installed = {
     "svelte",
+    "ron",
     "vim",
     "lua",
     "html",
@@ -26,7 +27,7 @@ M.mason = {
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
-    "stylua",
+    -- "stylua",
 
     -- web dev stuff
     "emmet-language-server",
@@ -44,8 +45,6 @@ M.mason = {
 
     -- c/cpp stuff
     "clangd",
-    "clang-format",
-
   },
 }
 

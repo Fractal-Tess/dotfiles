@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -28,17 +28,22 @@ local plugins = {
         "css-lsp",
         "html-lsp",
         "tailwindcss-language-server",
+
         -- C/C++
         "clangd",
-        "clang-format",
+
         -- Lua
         "lua-language-server",
-        "stylua",
+        -- "stylua",
+
         -- Rust
         "rust-analyzer",
-        "rustfmt"
-      }
-    }
+
+        -- Nix
+        "nil",
+        -- "nixpkgs-fmt"
+      },
+    },
   },
 
   {
@@ -63,7 +68,7 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     --  for users those who want auto-save conform + lazyloading!
-    -- event = "BufWritePre"
+    event = "BufWritePre",
     config = function()
       require "custom.configs.conform"
     end,
