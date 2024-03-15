@@ -18,7 +18,6 @@ local default_plugins = {
     lazy = false,
   },
 
-
   -- Copilot
 
   {
@@ -29,6 +28,9 @@ local default_plugins = {
       require("copilot").setup {
         suggestion = {
           auto_trigger = true,
+          filetypes = {
+            ["."] = true,
+          },
         },
       }
     end,
