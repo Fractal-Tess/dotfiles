@@ -1,4 +1,3 @@
-#! /bin/bash
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 

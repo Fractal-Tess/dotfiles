@@ -46,7 +46,7 @@
             value: "kitty", // The command to load the application if it isn't started (first application to start)
             // x, y, width, height are in pixels when an integer is inputted or a percentage when a float is inputted.
             // These values are relative to the size of the workspace, and will be restricted depending on the workspace size.
-            x: 680, y: 320, height: 800, width: 1200 
+            x: 480, y: 200, height: 780, width: 1200 
         ),
     ],
     window_rules: [
@@ -89,14 +89,17 @@
         (command: Execute, value: "polybar-msg cmd toggle", modifier: ["modkey"], key: "b"),
 
         // Execute
-        (command: Execute, value: "/home/fractal-tess/.config/rofi/scripts/launcher_t7", modifier: ["modkey"], key: "p"),
-        (command: Execute, value: "/home/fractal-tess/.config/rofi/powermenu/type-2/powermenu.sh", modifier: ["modkey"], key: "Escape"),
+        (command: Execute, value: "/home/fractal-tess/nixos/modules/home-manager/rofi/config/scripts/launcher_t7", modifier: ["modkey"], key: "p"),
+        (command: Execute, value: "/home/fractal-tess/nixos/modules/home-manager/rofi/config/powermenu/type-2/powermenu.sh", modifier: ["modkey"], key: "Escape"),
         (command: Execute, value: "/home/fractal-tess/.config/leftwm/themes/Fractal-Tess/scripts/toggle_keyboard.sh", modifier: ["Alt"], key: "1"),
         (command: Execute, value: "kitty", modifier: ["modkey"], key: "Return"),
         (command: Execute, value: "kitty -e zsh -c ncmpcpp", modifier: ["modkey"], key: "m"),
         (command: Execute, value: "code", modifier: ["modkey"], key: "c"),
         (command: Execute, value: "rofi -show calc -modi calc -no-show-match -no-sort", modifier: ["modkey", "Shift"], key: "c"),
         (command: Execute, value: "xset dpms force off", modifier: ["modkey"], key: "0"),
+        (command: Execute, value: "pactl set-sink-mute @DEFAULT_SINK@ toggle", modifier: [], key: "XF86AudioMute"),
+        (command: Execute, value: "pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0", modifier: [], key: "XF86AudioLowerVolume"),
+        (command: Execute, value: "pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0", modifier: [], key: "XF86AudioRaiseVolume"),
         (command: Execute, value: "pcmanfm -n", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "clipcat-menu", modifier: ["modkey"], key: "h"),
         (command: Execute, value: "flameshot gui", modifier: ["modkey", "Shift"], key: "s"),
@@ -162,27 +165,3 @@
     ],
     state_path: None,
 )
-
-// foreground:   #E8DFD6
-// background:   #021B21
-// cursorColor:  #2E3340
-
-// color0:       #032C36
-
-// color1:       #C2454E
-// color2:       #7CBF9E
-// color3:       #8A7A63
-// color4:       #2E3340
-
-// color5:       #FF5879
-// color6:       #44B5B1
-
-// color7:       #F2F1B9
-// color8:       #065F73
-// color9:       #EF5847
-// color10:      #A2D9B1
-// color11:      #BEB090
-// color12:      #61778D
-// color13:      #FF99A1
-// color14:      #9ED9D8
-// color15:      #F6F6C9
