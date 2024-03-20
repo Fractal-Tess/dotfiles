@@ -4,6 +4,23 @@ local default_plugins = {
 
   "nvim-lua/plenary.nvim",
 
+  -- PDF
+  -- {
+  --   "marioortizmanero/adoc-pdf-live.nvim",
+  --   config = function()
+  --     require("adoc_pdf_live").setup {
+  --       enabled = true,
+  --       -- The viewer command must be like `command <file>`
+  --       viewer = "zathura",
+  --       binary = "asciidoctor-pdf",
+  --       params = "",
+  --       debug = false,
+  --       style = "",
+  --       style_regex = "style\\.ya?ml",
+  --     }
+  --   end,
+  -- },
+
   {
     "NvChad/base46",
     branch = "v2.0",
