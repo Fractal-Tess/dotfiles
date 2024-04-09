@@ -16,6 +16,7 @@ local servers = {
   "emmet_language_server",
   "nil_ls",
   "csharp_ls", -- dotnet sdk
+  "phpactor",
 }
 
 for _, lsp in ipairs(servers) do
