@@ -41,8 +41,12 @@ local default_plugins = {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     build = ":Copilot auth",
+    event = "InsertEnter",
     config = function()
       require("copilot").setup {
+        panel = {
+          auto_refresh = true,
+        },
         suggestion = {
           auto_trigger = true,
           filetypes = {
@@ -56,7 +60,6 @@ local default_plugins = {
   -- Tags autoclose
   {
     "windwp/nvim-ts-autotag",
-    event = "VeryLazy",
     config = function()
       require("nvim-ts-autotag").setup()
     end,
