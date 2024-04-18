@@ -16,7 +16,7 @@ local options = {
   },
   git = {
     enable = false,
-    ignore = true,
+    ignore = false,
   },
   filesystem_watchers = {
     enable = true,
@@ -29,7 +29,7 @@ local options = {
   renderer = {
     root_folder_label = false,
     highlight_git = false,
-    highlight_opened_files = "none",
+    highlight_opened_files = "all",
 
     indent_markers = {
       enable = false,
