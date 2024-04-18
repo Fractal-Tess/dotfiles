@@ -5,6 +5,9 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
 
+    yml = { { "prettierd", "prettier" } },
+    toml = { { "prettierd", "prettier" } },
+    json = { { "prettierd", "prettier" } },
     typescript = { { "prettierd", "prettier" } },
     javascript = { { "prettierd", "prettier" } },
     css = { { "prettierd", "prettier" } },
@@ -14,8 +17,11 @@ local options = {
 
     sh = { "shfmt" },
     nix = { "nixpkgsfmt" },
+
     c = { "clangformat" },
     cpp = { "clangformat" },
+
+    php = { "phpformat" },
   },
 
   formatters = {
@@ -26,6 +32,10 @@ local options = {
     clangformat = {
       inherit = false,
       command = "clang-format",
+    },
+    phpformat = {
+      command = "php-cs-fixer",
+      args = { "fix", "--using-cache=no" },
     },
   },
 
