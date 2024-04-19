@@ -44,6 +44,7 @@ local default_plugins = {
     event = "InsertEnter",
     config = function()
       require("copilot").setup {
+        filetypes = { markdown = true },
         panel = {
           auto_refresh = true,
         },
