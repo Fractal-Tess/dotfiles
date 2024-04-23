@@ -5,18 +5,17 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html",
-  "cssls",
-  "tsserver",
-  "clangd",
-  "svelte",
-  "tailwindcss",
-  "rust_analyzer",
-  "eslint",
-  "emmet_language_server",
-  "nil_ls",
+  "html", -- html
+  "cssls", -- css, scss, sass, less
+  "tsserver", -- js, ts, jsx, tsx
+  "clangd", -- c, cpp
+  "svelte", -- svelte
+  "tailwindcss", -- tailwindcss
+  "rust_analyzer", -- rust
+  "eslint", -- js, ts, jsx, tsx (eslint)
+  "emmet_language_server", -- emmet
+  "nil_ls", -- lua
   "csharp_ls", -- dotnet sdk
-  "phpactor",
 }
 
 for _, lsp in ipairs(servers) do
@@ -25,6 +24,3 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
-
---
--- lspconfig.pyright.setup { blabla }

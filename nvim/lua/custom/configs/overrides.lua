@@ -1,32 +1,31 @@
 local M = {}
 
 M.treesitter = {
+
   ensure_installed = {
-    "svelte",
-    "ron",
-    "vim",
     "lua",
+    "vim",
+
+    "svelte",
+    "astro",
     "html",
+    "tsx",
     "css",
+    "xml",
+    "json",
     "javascript",
     "typescript",
-    "tsx",
-    "c",
+    "php",
     "markdown",
     "markdown_inline",
-  },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
+
+    "c_sharp",
+    "sql",
+    "yaml",
+    "ron",
+    "c",
   },
 }
-
-M.mason = {
-  ensure_installed = {},
-}
-
 -- git support in nvimtree
 M.nvimtree = {
   git = {

@@ -10,6 +10,7 @@ local options = {
     json = { { "prettierd", "prettier" } },
     typescript = { { "prettierd", "prettier" } },
     javascript = { { "prettierd", "prettier" } },
+    tsx = { { "prettierd", "prettier" } },
     css = { { "prettierd", "prettier" } },
     html = { { "prettierd", "prettier" } },
 
@@ -20,8 +21,6 @@ local options = {
 
     c = { "clangformat" },
     cpp = { "clangformat" },
-
-    php = { "phpformat" },
   },
 
   formatters = {
@@ -32,10 +31,6 @@ local options = {
     clangformat = {
       inherit = false,
       command = "clang-format",
-    },
-    phpformat = {
-      command = "php-cs-fixer",
-      args = { "fix", "--using-cache=no" },
     },
   },
 

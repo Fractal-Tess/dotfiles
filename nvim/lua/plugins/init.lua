@@ -2,24 +2,8 @@
 -- List of all default plugins & their definitions
 local default_plugins = {
 
+  -- Lua functions
   "nvim-lua/plenary.nvim",
-
-  -- PDF
-  -- {
-  --   "marioortizmanero/adoc-pdf-live.nvim",
-  --   config = function()
-  --     require("adoc_pdf_live").setup {
-  --       enabled = true,
-  --       -- The viewer command must be like `command <file>`
-  --       viewer = "zathura",
-  --       binary = "asciidoctor-pdf",
-  --       params = "",
-  --       debug = false,
-  --       style = "",
-  --       style_regex = "style\\.ya?ml",
-  --     }
-  --   end,
-  -- },
 
   {
     "NvChad/base46",
@@ -36,7 +20,6 @@ local default_plugins = {
   },
 
   -- Copilot
-
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -55,14 +38,6 @@ local default_plugins = {
           },
         },
       }
-    end,
-  },
-
-  -- Tags autoclose
-  {
-    "windwp/nvim-ts-autotag",
-    config = function()
-      require("nvim-ts-autotag").setup()
     end,
   },
 
@@ -116,6 +91,55 @@ local default_plugins = {
   },
 
   {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "html",
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "svelte",
+      "tsx",
+      "jsx",
+      "rescript",
+      "xml",
+      "php",
+      "markdown",
+      "astro",
+      "glimmer",
+      "handlebars",
+      "hbs",
+    },
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-ts-autotag").setup {
+        enable = true,
+        enable_rename = true,
+        enable_close = true,
+        enable_close_on_clash = true,
+        filetypes = {
+          "html",
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+          "svelte",
+          "tsx",
+          "jsx",
+          "rescript",
+          "xml",
+          "php",
+          "markdown",
+          "astro",
+          "glimmer",
+          "handlebars",
+          "hbs",
+        },
+      }
+    end,
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile" },
     tag = "v0.9.2",
@@ -143,27 +167,26 @@ local default_plugins = {
     end,
   },
 
-  -- lsp stuff
-  {
-    "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-    opts = function()
-      return require "plugins.configs.mason"
-    end,
-    config = function(_, opts)
-      dofile(vim.g.base46_cache .. "mason")
-      require("mason").setup(opts)
-
-      -- custom nvchad cmd to install all mason binaries listed
-      vim.api.nvim_create_user_command("MasonInstallAll", function()
-        if opts.ensure_installed and #opts.ensure_installed > 0 then
-          vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
-        end
-      end, {})
-
-      vim.g.mason_binaries_list = opts.ensure_installed
-    end,
-  },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
+  --   opts = function()
+  --     return require "plugins.configs.mason"
+  --   end,
+  --   config = function(_, opts)
+  --     dofile(vim.g.base46_cache .. "mason")
+  --     require("mason").setup(opts)
+  --
+  --     -- custom nvchad cmd to install all mason binaries listed
+  --     vim.api.nvim_create_user_command("MasonInstallAll", function()
+  --       if opts.ensure_installed and #opts.ensure_installed > 0 then
+  --         vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
+  --       end
+  --     end, {})
+  --
+  --     vim.g.mason_binaries_list = opts.ensure_installed
+  --   end,
+  -- },
 
   {
     "neovim/nvim-lspconfig",
