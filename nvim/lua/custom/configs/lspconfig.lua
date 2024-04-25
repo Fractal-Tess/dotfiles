@@ -16,6 +16,8 @@ local servers = {
   "emmet_language_server", -- emmet
   "nil_ls", -- lua
   "csharp_ls", -- dotnet sdk
+  "jsonls", -- json
+  "sqls", -- sql
 }
 
 for _, lsp in ipairs(servers) do
