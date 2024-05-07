@@ -60,6 +60,7 @@
         ( window_class: "(?i).*riot.*", spawn_on_tag: 4, spawn_floating: true),
         ( window_class: "(?i).*lutris.*", spawn_on_tag: 4, spawn_floating: true),
         ( window_class: "(?i).*sun-awt-X11-XFramePeer.*", spawn_on_tag: 4, spawn_floating: true),
+        ( window_class: "(?i).*nextcloud.*", spawn_on_tag: 4, spawn_floating: true),
         ( window_class: "(?i).*minecraft.*", spawn_on_tag: 4, spawn_floating: true),
         ( window_class: "(?i).*tlauncher.*", spawn_on_tag: 4, spawn_floating: true),
         ( window_class: "(?i).*dbeaver.*", spawn_on_tag: 5, spawn_floating: true),
