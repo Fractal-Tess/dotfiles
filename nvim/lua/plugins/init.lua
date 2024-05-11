@@ -41,6 +41,7 @@ local default_plugins = {
     end,
   },
 
+  -- Terminal
   {
     "NvChad/nvterm",
     init = function()
@@ -52,6 +53,7 @@ local default_plugins = {
     end,
   },
 
+  -- Color highligher
   {
     "NvChad/nvim-colorizer.lua",
     event = "User FilePost",
@@ -76,6 +78,7 @@ local default_plugins = {
     end,
   },
 
+  -- Landing page
   {
     "lukas-reineke/indent-blankline.nvim",
     version = "2.20.7",
@@ -90,6 +93,7 @@ local default_plugins = {
     end,
   },
 
+  -- Auto closing tags
   {
     "windwp/nvim-ts-autotag",
     ft = {
@@ -139,6 +143,7 @@ local default_plugins = {
     end,
   },
 
+  -- Color highlighting
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile" },
@@ -167,27 +172,7 @@ local default_plugins = {
     end,
   },
 
-  -- {
-  --   "williamboman/mason.nvim",
-  --   cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-  --   opts = function()
-  --     return require "plugins.configs.mason"
-  --   end,
-  --   config = function(_, opts)
-  --     dofile(vim.g.base46_cache .. "mason")
-  --     require("mason").setup(opts)
-  --
-  --     -- custom nvchad cmd to install all mason binaries listed
-  --     vim.api.nvim_create_user_command("MasonInstallAll", function()
-  --       if opts.ensure_installed and #opts.ensure_installed > 0 then
-  --         vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
-  --       end
-  --     end, {})
-  --
-  --     vim.g.mason_binaries_list = opts.ensure_installed
-  --   end,
-  -- },
-
+  -- LSP configuration
   {
     "neovim/nvim-lspconfig",
     event = "User FilePost",
@@ -278,6 +263,7 @@ local default_plugins = {
     end,
   },
 
+  -- Fuzzy searching
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter" },

@@ -18,6 +18,7 @@ local servers = {
   "csharp_ls", -- dotnet sdk
   "jsonls", -- json
   "sqls", -- sql
+  "phpactor", -- php
 }
 
 for _, lsp in ipairs(servers) do
